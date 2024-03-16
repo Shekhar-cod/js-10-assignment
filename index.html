@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault();onformSubmit();" autocomplete="off">
+                    <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" name="fullName" id="fullName">
+                    </div>
+                    <div class="form-group">
+                        <label >EMAIL</label>
+                        <input type="text" name="EMAIL" id="EMAIL">
+                    </div>
+                    <div class="form-group">
+                            <label>CITY</label>
+                            <input type="text" name="CITY" id="CITY">
+                    </div>
+                    <div class="form-group">
+                            <label>STATE</label>
+                            <input type="text" name="STATE" id="STATE">
+                    </div>
+                    <div class="form-action-buttons">
+                        <input type="Submit" value="Submit">
+
+                    </div>
+                </form>
+            </td>
+        </tr>
+    </table>
+
+    <hr>
+
+            <td>
+                <table class="table table-dark" class="list" id="employeeList">
+                    <thead>
+                        <tr>
+                            <th scope="col">Full Name</th>
+                            <th scope="col">EMAIL</th>
+                            <th scope="col">CITY</th>
+                            <th scope="col">STATE</th>
+                            <th></th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+        
+    
+    <script src="index.js"></script>
+</body>
+</html>

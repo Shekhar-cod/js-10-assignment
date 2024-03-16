@@ -1,1 +1,1 @@
-# git This is my JS & DOM Coding Assignment
+#  This is my JS & DOM Coding Assignment

@@ -11,6 +11,7 @@ function onformSubmit(){
     
    
 }
+//creating new function readformdata 
 //getting accesss to the HTML element by getElementById
 function readFormData() {
     let formData = {};

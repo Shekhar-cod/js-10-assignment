@@ -11,7 +11,7 @@ function onformSubmit(){
     
    
 }
-
+//getting accesss to the HTML element by getElementById
 function readFormData() {
     let formData = {};
     formData["fullName"] = document.getElementById("fullName").value;
@@ -20,7 +20,8 @@ function readFormData() {
     formData["STATE"] = document.getElementById("STATE").value;
     return formData;
 }
-
+//creating new function to pass above formData
+//Accesing HTML tBody element by getElementByTagName('tbody')
 function insertNewRecord(data) {
     let table = document.getElementById("employeeList").getElementsByTagName('tbody')[0];
     let newRow = table.insertRow(table.length);
@@ -33,11 +34,12 @@ function insertNewRecord(data) {
     cell4 = newRow.insertCell(3);
     cell4.innerHTML = data.STATE;
     cell4 = newRow.insertCell(4);
+   //adding onClick function and creating onEdit(this) to edit elements on our form 
     cell4.innerHTML = `<a onClick="onEdit(this)">Edit</a>`
                        
 
 }
-
+//creating function name resetform to reset the value in the form of our website
 function resetForm() {
     document.getElementById("fullName").value = "";
     document.getElementById("EMAIL").value = "";
@@ -45,7 +47,7 @@ function resetForm() {
     document.getElementById("STATE").value = "";
     selectedRow = null;
 }
-
+// creating onEdit function to edit element 
 function onEdit(td) {
     selectedRow = td.parentElement.parentElement;
     document.getElementById("fullName").value = selectedRow.cells[0].innerHTML;
@@ -53,7 +55,7 @@ function onEdit(td) {
     document.getElementById("CITY").value = selectedRow.cells[2].innerHTML;
     document.getElementById("STATE").value = selectedRow.cells[3].innerHTML;
 }
-
+//creating updaterecord function to update operations
 function updateRecord(formData) {
     selectedRow.cells[0].innerHTML = formData.fullName;
     selectedRow.cells[1].innerHTML = formData.EMAIL;
